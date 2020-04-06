@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'CssCusLogin/styles.css' %}">
+  </head>
+  <body>
+    <form class="box" action="" method="post">
+        {% csrf_token %}
+      <h1>Customer Login</h1>
+      <input type="text" name="phone" placeholder="Phone">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" name="" value="submit">
+      <div>
+      New User &nbsp;&nbsp;&nbsp;<a href="register/">Register</a>&nbsp;&nbsp; here
+      </div>
+    </form>
+    <button style="
+    color:#fff ;
+    border:2px solid ;
+    width:80px ; 
+    height:40px ; 
+    font-size:20px ; 
+    font-style: sans-serif;
+    border-radius: 15px;
+    background-color : brown ;
+    margin : 45% 47%"> 
+<a href='/' style= "color:#fff ; text-decoration:none">Back</a>
+</button>
+  </body>
+</html>

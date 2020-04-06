@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'cssOrderSummary/styles.css' %}">
+</head>
+
+<body>
+  <h1>ORDER SUMMARY</h1>
+  <ul>
+    <li>
+<span class="I">Item</span>
+<span class="Q">Quantity</span>
+  <span class="p">Price</span>
+
+    {% for ord in dct %}
+      <li>
+        {% for orc in ord %}
+          <span class="Item">{{orc}}</span>
+        {% endfor %}
+    </li>
+    {% endfor %}
+
+    <li>
+      <span class="Item">TOTAL AMOUNT</span>
+      <span class="Quantity"></span>
+      <span class="Price">{{sum1}}</span>
+    </li>
+    <li>
+       <span class="Item"></span>
+       <span class="Quantity"></span>
+       <span class="Price"></span>
+    </li>
+    <li>
+      <span class="Item">CGST</span>
+      <span class="Quantity">2.5%</span>
+      <span class="Price">{{cgst}}</span>
+    </li>
+    <li>
+      <span class="Item">SGST</span>
+      <span class="Quantity">2.5%</span>
+      <span class="Price">{{cgst}}</span>
+    </li>
+    <li>
+      <span class="Item">TOTAL PAYMENT</span>
+      <span class="Quantity"></span>
+      <span class="Price">{{total}}</span>
+    </li>
+    <a href="payment">
+    <input type="button" name="btn" value="Place-order">
+    </a>
+  </ul>
+
+</body>
+
+</html>

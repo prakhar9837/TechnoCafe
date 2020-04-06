@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'cssSupLoggedIn/styles.css' %}">
+</head>
+
+<body>
+    <h2 style="font-family:cursive;font-weight:100;color:#fff;border:1px solid rgba(219, 110, 154, 0.5);background:rgb(54, 6, 6);padding:10px;width:220px;margin-left:33%;">Ingredients Required
+
+    </h2>
+  <ul>
+    <li>
+<span class="I">Ingredient Name</span>
+<span class="Q"></span>
+  <span class="p">Amount(g)</span>
+    </li>
+    
+    {% for ord in dct %}
+      <li>
+        {% for orc in ord %}
+          <span class="Item">{{orc}}</span>
+          <span ></span>
+        {% endfor %}
+    </li>
+    {% endfor %}
+    <li>
+       <span class="Item"></span>
+       <span class="Quantity"></span>
+       <span class="Price"></span>
+    </li>
+  </ul>
+  <button style="
+  color:#fff ;
+  border:2px solid ;
+  width:80px ; 
+  height:40px ; 
+  font-size:20px ; 
+  font-style: sans-serif;
+  border-radius: 15px;
+  background-color : brown ;
+  margin : 10% 43%"> 
+<a href='/' style= "color:#fff ; text-decoration:none">Back</a>
+</button>
+</body>
+
+</html>

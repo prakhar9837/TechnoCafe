@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'CssAddItem/styles.css' %}">
+  </head>
+  <body>
+  <div class="box">
+  <h2>Add Item</h2>
+  <form class="" action="" method="post">
+
+    {% csrf_token %}
+
+    <div class="inputBox">
+      <input type="text" name="id" required="">
+      <label>Item ID</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="category" required="">
+      <label>Item Category</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="name" required="">
+      <label>Item Name</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="price" required="">
+      <label>Item Price</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="desc" required="">
+      <label>Item Description</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="empid" required="">
+      <label>Emp Id</label>
+    </div>
+    <input type="submit" name="" value="Add Required Ingredients">
+  </form>
+  </div>
+     <button style="
+                      color:#fff ;
+                      border:2px solid ;
+                      width:80px ; 
+                      height:40px ; 
+                      font-size:20px ; 
+                      font-style: sans-serif;
+                      border-radius: 15px;
+                      background-color : brown ;
+                      margin : 51% 47%"> 
+       <a href='/employee/loggedin' style= "color:#fff ; text-decoration:none">Back</a>
+    </button>
+  </body>
+</html>

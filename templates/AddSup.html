@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'CssAddSup/styles.css' %}">
+  </head>
+  <body>
+  <div class="box">
+  <h2>Add Supplier</h2>
+  <form class="" action="" method="post">
+
+    {% csrf_token %}
+
+    <div class="inputBox">
+      <input type="text" name="id" required="">
+      <label>Supplier ID</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="name" required="">
+      <label>Supplier Name</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="phone" required="">
+      <label>Phone No.</label>
+    </div>
+    <div class="inputBox">
+      <input type="Password" name="password1" required="">
+    <label>Password</label>
+    </div>
+    <div class="inputBox">
+      <input type="Password" name="password2" required="">
+      <label>Confirm Password</label>
+    </div>
+    <div class="inputBox">
+        <input type="text" name="empId" required="">
+        <label>Employee Id</label>
+    </div>
+    <input type="submit" name="" value="Submit">
+  </form>
+  </div>
+      {% for message in messages %}
+        {{message}}
+      {% endfor %}
+      <button style="
+      color:#fff ;
+      border:2px solid ;
+      width:80px ; 
+      height:40px ; 
+      font-size:20px ; 
+      font-style: sans-serif;
+      border-radius: 15px;
+      background-color : brown ;
+      margin : 51% 47%"> 
+<a href='/employee/loggedin' style= "color:#fff ; text-decoration:none">Back</a>
+</button>
+  </body>
+</html>

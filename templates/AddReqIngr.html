@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'CssAddItem/styles.css' %}">
+  </head>
+  <body>
+  <div class="box">
+  <h2>Add Ingredients</h2>
+  <form class="" action="" method="post">
+
+    {% csrf_token %}
+    <div class="inputBox">
+        <input type="text" name="id" required="">
+        <label>Item Id</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="name" required="">
+      <label>Ingredient Name</label>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="amount" required="">
+      <label>Ingredient Amount Required</label>
+    </div>
+    <input type="submit" name="" value="Add">
+  </form>
+  </div>
+      {% for message in messages %}
+        {{message}}
+      {% endfor %}
+      <a href='/employee/loggedin' > Click for previous page</a>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Techno Foods</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Anton|Liu+Jian+Mao+Cao|Montserrat|Ubuntu&display=swap" rel="stylesheet">
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+      <a class="navbar-brand" href="">Techno Cafe</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cta">Connect</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+
+
+    <!-- Title -->
+
+    <div class="row">
+
+      <div class="col-lg-6">
+        <h1 class="big-heading">Amazing Taste and Beautiful place..</h1>
+        <a href="customer/">
+          <button type="button" class="btn btn-dark btn-lg download-button"> Customers</button>
+        </a>
+        <a href="employee/">
+          <button type="button" class="btn btn-outline-light btn-lg download-button"> Employees</button>
+        </a>
+        <a href="supplier/">
+          <button type="button" class="btn btn-outline-light btn-lg download-button"> Supplier</button>
+        </a>
+      </div>
+
+      <div class="col-lg-6">
+        <img class="title-image" src="{% static 'images\cofee3.png' %}" alt="iphone-mockup">
+      </div>
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section" id="features">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-check-circle fa-4x"></i>
+          <h3 class="feature-title">Affordable price.</h3>
+          <p>Quality comes at prices.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-bullseye fa-4x"></i>
+          <h3 class="feature-title">Location</h3>
+          <p>Located at the heart of the city.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i>
+          <h3 class="feature-title">Smart.</h3>
+          <p>You don't have to wait for waitors now.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- Testimonials -->
+
+  <section class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">You have got a smart device at your table</h2>
+          <img class="testimonial-image" src="{% static 'images\images7.png' %}" alt="dog-profile">
+          <em>Bangalore,India</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">Bestseller</h2>
+          <img class="testimonial-image" src="{% static 'images\images6.png' %}" alt="lady-profile">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </section>
+  <footer id="footer">
+
+    <p>© Copyright 2019 Techno Foods</p>
+
+  </footer>
+
+</body>
+
+</html>
